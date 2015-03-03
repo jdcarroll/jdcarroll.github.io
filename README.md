@@ -1,3 +1,0 @@
-# jdcarroll.github.io
-
-Hello
