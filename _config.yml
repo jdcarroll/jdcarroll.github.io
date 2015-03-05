@@ -1,12 +1,12 @@
 # Site settings
 title: Jeff Carroll's Awesome Website
-email: your-email@domain.com
+email: jdcarroll@fullsail.edu
 description: > # this means to ignore newlines until "baseurl:"
-  This is my awesome description.
+  I am passionate to discover as much about web development as I possibly can while here at full sail.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://jdcarroll.github.io" # the base hostname & protocol for your site
+twitter_username: "@unbelievablife"
+github_username:  jdcarroll
 
 # Build settings
 markdown: kramdown

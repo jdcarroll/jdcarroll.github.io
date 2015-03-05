@@ -8,18 +8,114 @@ siteVar: test-class
 
 <img id="me" src="/images/Carroll_Jeffrey_selfportraitColorize.png">
 
-I was playing with understanding the structure of jekyll and the backend terminal code.. I think that
+<h2>Jekyll</h2>
+
+<p>So I started my Jekyll project with playing around with the basic features set of how Jekyll handles templating.  Once I had a good grasp on how the templating engine in Jekyll worked I really wanted to understand how the video in class utilized Jekyll Grunt and Sass.  Since these three separate parts I decided to tackle them one at a time.  I felt like Jekyll was the first one.</p>
+
+Jekyll Folder structure:
 
 {% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
+-- _config.yml
+-- _drafts
+   -- draft1.html
+   -- draft2.markdown
+--_includes
+   -- footer.html
+   -- header.html
+--_layouts
+   -- default.html
+   -- post.html
+--_posts
+   -- 2014-3-5-Jeffs-thoughts-on-Jekyll.html
+--_data
+   -- members.yml
+--_site
+--index.html
 {% endhighlight %}
 
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
+<p>I was Playing with the templaing as I said earlier and the way that we use these files.  _config.yml is used to store configuration data similarly to the way that package.json works with grunt installing and configuring grunt for you before the project is started.. this enables developers to work together as a team and have a specific configuration pre set up for them when they take off running.</p>
 
-[jekyll]:      http://jekyllrb.com
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-help]: https://github.com/jekyll/jekyll-help
+<p>As I had said the config file can have actually configuration setup in it to make Jekyll operate in a specific way currently all I have setup is for it to populate the header with a Title and the foote to populate with my contact information.</p>
+
+<h2>Grunt</h2>
+
+<p>I will be honest at this point because I was understanding how jekyll as a local server was working my curiosity of grunt took over at this point and I started play with grunt.  After a google searches I had a pretty good idea of what to do and I created my very first gruntfile.js and used node to configure grunt to work in this directory.</p>
+
+<p>I stared by creating a package.json file that installed grunt from npm (node package manager).</p>
+
+<p>The Package.json File:</p>
+
+{% highlight ruby %}
+{
+    "name" : "portfolio",
+    "version" : "0.0.1",
+    "dependencies" : {
+        "grunt" : "~0.4.1",
+        "grunt-contrib-watch" : "~0.5.3",
+        "grunt-contrib-compass" : "~0.5.0",
+        "grunt-contrib-uglify" : "~0.2.2",
+        "matchdep" : "~0.1.2"
+    }// dependencies
+}
+{% endhighlight %}
+
+<p>So if you look at the above json The first bit should be rather self explanatory but all I am doning giving my project a name and version number then things get a little bit more interesting with dependencies. </p>
+
+<p>Grunt is a is a javascript automated task runner.. Super cool</p>
+
+<p>So essentially what I am doing is installing grunt and a few grunt plugins.  it the name of the program on the left and it corresponding version number on the right just to be clear.</p>
+
+<h3>Grunt Watch</h3>
+
+<p>What grunt watch does is almost exactly the same thing that jekyll does with automating post within jekyll. However, grunt also has this additional feature called live reload which during the dev process will force the browser to reload on any change.</p>
+
+<p>This means that if you were to say change the background color variable in Sass as you hit save in your IDE the browser window will auto update. of course you have to configure grunt to "Watch" for sass changes which I will explain in a moment but in a nutshell this tool is super powerful</p>
+
+<p>Here is the grunt configuration file gruntfile.js :</p>
+
+{% highlight ruby %}
+module.exports = function(grunt){
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-compass');
+    grunt.initConfig({
+        uglify: {
+            my_target: {
+                files: {
+                    '_/js/main.js': ['_/components/js/*.js']
+                }//files
+            }//my_target
+        },//uglify
+        compass: {
+            dev: {
+                options: {
+                    config: 'config.rb'
+                }//options
+            }//dev
+        },//compass
+        watch:{
+            options: { livereload: true },
+            script: {
+                files: ['_/components/js/*.js'],
+                tasks: ['uglify']
+            },//script
+            sass: {
+                files: ['_/components/sass/*.scss'],
+                tasks: ['compass:dev']
+            },//sass
+            html: {
+                files: ['*.html']
+            }//html
+        }//watch
+    })//initConfig
+    grunt.registerTask('default', 'watch');
+}//exports
+{% endhighlight %}
+
+<p>In the above grunt file we have a lot going on in here. First module.exports is a node.js command to install or load node package manager tasks.  Essentially we are declaring module.exports a function quite simply.</p>
+
+<p>Then we are loading uglify first which is just simply a compressor for javascript.  It will compress multiple js files into a single javascript file similar to sass being compiled into css.</p>
+
+<p>Then we load watch which like jekyll when and as I explained above will detect changes in the site.</p>
+
+<p>then we have compass which is the </p>
