@@ -116,6 +116,18 @@ module.exports = function(grunt){
 
 <p>Then we are loading uglify first which is just simply a compressor for javascript.  It will compress multiple js files into a single javascript file similar to sass being compiled into css.</p>
 
-<p>Then we load watch which like jekyll when and as I explained above will detect changes in the site.</p>
+<p>Then we load watch which like jekyll as I explained above will detect changes in the site.</p>
 
-<p>then we have compass which is the </p>
+<p>then we have compass which is the engine that not only changes sass to css but depending on how  you handle the out put could make it compressed for the sake of speed. Compass is actually a ruby gem that gets installed on the system and configured with a config.rb file which is ruby a language that to be honest I dont really know but I was able to look at the file and figure out how it works.</p>
+
+{% highlight ruby %}
+
+require "susy"
+css_dir = '_/css'
+sass_dir = '_/components/sass'
+javascripts_dir = '_/js'
+output_style = :compressed
+
+{% endhighlight %}
+
+With all this said I was able to get grunt with compass and sass working dynamically together where i update sass and grunt auto updates the page with out jekyll.  The thing that I was struggling with was bring jekyll in to a environment with grunt.. I know in theory how it could be down but i am confused about getting jeyll working while using grunts server?  If you can help me with this I would greatly apprciate it :)
