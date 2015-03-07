@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="25e2f859-2c78-4f65-9664-89a5d3cf16eb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2015-03-01-Jeff_Thoughts.html" afterPath="$PROJECT_DIR$/_posts/2015-03-01-Jeff_Thoughts.html" />
-    </list>
+    <list default="true" id="25e2f859-2c78-4f65-9664-89a5d3cf16eb" name="Default" comment="" />
     <ignored path="jdcarroll.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
