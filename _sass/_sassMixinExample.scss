@@ -1,0 +1,27 @@
+.box {
+  @include horizontal-gradient(white, green);
+  height: 300px;
+  width: 300px;
+  @include centerClass();
+  @include boxShadow();
+}
+
+.jeffsButton{
+  @include buttonJeff();
+}
+
+p {
+  font-size: 16px;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  p {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1024px) {
+  p {
+    font-size: 20px;
+  }
+}
