@@ -1,23 +1,16 @@
 ---
-layout: default
+layout: landing
 ---
 
-<div class="home">
-
-  <h1 class="page-heading">Jeff Carroll's Thoughts</h1>
-
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+<div class="landingPage">
+    <a href="https://github.com/jdcarroll"><img src="images/header/forkMeGitHub.png" alt="Fork me on GitHub"/></a>
+    <div class="wrapper">
+        <h1 id="title">Web Developer</h1>
+        <p id="byline">The Interactive Experience</p>
+    </div>
+    <img id="selfPortrait" src="images/header/Carroll_Jeffrey_selfportraitColorize.png" alt="Digital Self Portrait"/>
 </div>
+
+
+
+

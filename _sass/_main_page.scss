@@ -1,0 +1,33 @@
+.landingPage {
+  position: relative;
+  display: block;
+  background-image: url("../images/header/header_background.jpg");
+  overflow: auto;
+  min-height: $min-height;
+}
+
+#selfPortrait{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+#title {
+  color: $header-text-color;
+  font-size: 5em;
+  width: 570px;
+  border-bottom: 1px solid $header-text-color;
+}
+
+#byline {
+  float: left;
+  color: $header-text-color;
+  margin-left: 375px;
+}
+
+#me {
+  zoom: 20%;
+  display: block;
+  padding-bottom: 20px;
+  float: right;
+}

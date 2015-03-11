@@ -1,0 +1,38 @@
+
+.site-header {
+  box-shadow: $box-shadow-color;
+  z-index: 99999999;
+}
+
+
+#logo {
+  width: 195px;
+
+  & span:first-child{
+    background-color: $logoColor;
+    @include borderRadius(50%);
+    display: inline;
+    padding: 0px 20px;
+    margin: 5px ;
+    font-size: $logoFontSize;
+    float: left;
+    color: $header-text-color;
+  }
+
+  & span:nth-of-type(2){
+    color: $logoColor;
+    margin-top: 12px;
+    display: inline;
+    border-bottom: 1px solid $logoColor;
+  }
+
+  & span:nth-of-type(3){
+    display: block;
+    font-size: .43em;
+    margin-top: 0px;
+    padding-top: 0px;
+    font-weight: lighter;
+    color: $header-text-color;
+  }
+
+}

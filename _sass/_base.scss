@@ -98,7 +98,6 @@ a {
 
     &:hover {
         color: $text-color;
-        text-decoration: underline;
     }
 }
 
@@ -119,7 +118,7 @@ blockquote {
         margin-bottom: 0;
     }
 }
-
+h1
 
 
 /**
@@ -201,12 +200,4 @@ pre {
             fill: $grey-color;
         }
     }
-}
-
-
-#me {
-  zoom: 20%;
-  display: block;
-  padding-bottom: 20px;
-  float: right;
 }
