@@ -2,7 +2,6 @@
 title: Jeff Carroll Portfolio
 email: jdcarroll@fullsail.edu
 description: > # this means to ignore newlines until "baseurl:"
- I am passionate to discover as much about web development as I possibly can while here at full sail.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://jdcarroll.github.io" # the base hostname & protocol for your site
 twitter_username: "@unbelievablife"
