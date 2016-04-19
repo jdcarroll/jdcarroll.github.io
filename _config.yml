@@ -2,10 +2,15 @@
 title: Jeff Carroll Portfolio
 email: jdcarroll22@gmail.com
 description: "" # this means to ignore newlines until "baseurl:"
+gems: [jekyll-paginate]
+paginate: 5
+paginate_path: "/blog/page:num/"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://jdcarroll.github.io" # the base hostname & protocol for your site
 twitter_username: "@unbelievablife"
 github_username:  jdcarroll
-
+exclude:
+  - "bower_components"
+  - "bower.json"
 # Build settings
 markdown: kramdown
