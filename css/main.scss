@@ -29,7 +29,13 @@ $content-width:    800px;
 $on-palm:          600px;
 $on-laptop:        800px;
 
-
+#day{
+    width: 600px;
+    margin: 10px auto;
+}
+iframe {
+  width: 100%;
+}
 
 // Using media queries with like this:
 // @include media-query($on-palm) {
