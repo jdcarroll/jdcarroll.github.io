@@ -7,7 +7,7 @@ paginate: 5
 paginate_path: "/blog/page:num/"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://jdcarroll.github.io" # the base hostname & protocol for your site
-twitter_username: "@unbelievablife"
+twitter_username: "@jdcarroll22"
 github_username:  jdcarroll
 
 # Build settings
