@@ -50,8 +50,6 @@ iframe {
     }
 }
 
-
-
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "variables",
@@ -61,6 +59,7 @@ iframe {
         "syntax-highlighting",
         "header",
         "main_page",
+        "portfolio",
         "sassMixinExample.scss",
         "footer"
 ;

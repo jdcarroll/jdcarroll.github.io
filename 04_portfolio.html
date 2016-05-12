@@ -7,10 +7,10 @@ permalink: /portfolio/
 <h1>Github Repos</h1>
 
 {% for repository in site.github.public_repositories %}
-<hr>
-  * [({{ repository }})
-<hr>
-<br>
+<div class="card">
+	 * [({{ repository }})
+</div>
+
 {% endfor %}
 
 <p>check out me <a href="https://github.com/jdcarroll">github</a> in the mean time...</p>
