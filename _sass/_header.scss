@@ -24,6 +24,9 @@
     margin-top: 12px;
     display: inline;
     border-bottom: 1px solid $logoColor;
+     & a:hover {
+      text-decoration: none;
+    }
   }
 
   & span:nth-of-type(3){
@@ -33,6 +36,10 @@
     padding-top: 0px;
     font-weight: lighter;
     color: $header-text-color;
+
+    & a:hover {
+      text-decoration: none;
+    }
   }
 
 }
